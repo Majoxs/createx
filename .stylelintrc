@@ -567,7 +567,7 @@
 			}
 		],
 		"declaration-no-important": [
-			true,
+			false,
 			{
 				"severity": "warning"
 			}
