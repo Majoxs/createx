@@ -1,7 +1,5 @@
 const portSlider = document.querySelector('.portfolio-section__items');
 
-
-
 const portfolioSlider = new Swiper(portSlider, {
   slidesPerView: 3,
   spaceBetween: gap,
@@ -51,4 +49,14 @@ document.querySelector('.portfolio-section__next').addEventListener('click', () 
   activeSlide.classList.add('slider-visible')
   nextActiveSlide.classList.add('slider-visible')
   nextNextActiveSlide.classList.add('slider-visible')
+});
+
+const testimonialsSlider = new Swiper('.testimonials__items', {
+  slidesPerView: 1,
+  spaceBetween: gap,
+  loop: true,
+  navigation: {
+    nextEl: '.testimonials__next',
+    prevEl: '.testimonials__prev',
+  },
 });
