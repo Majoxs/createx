@@ -5,7 +5,6 @@ const portfolioSlider = new Swiper(portSlider, {
   spaceBetween: gap,
   on: {
     init: function () {
-      console.log('swiper initialized');
 
       const activeSlide = portSlider.querySelector('.swiper-slide-active');
       const nextActiveSlide = activeSlide.nextElementSibling;
