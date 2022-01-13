@@ -8,6 +8,14 @@
 
   &__nav {
     margin-left: -112px;
+
+    @include minidesk {
+      margin-left: 0;
+    }
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &--main {
@@ -27,5 +35,13 @@
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
     border-radius: 2px;
+  }
+
+  @include minidesk {
+    max-width: 100px;
+  }
+
+  @include tablet {
+    max-width: none;
   }
 }

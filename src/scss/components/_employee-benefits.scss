@@ -80,11 +80,40 @@
     line-height: 150%;
     text-align: center;
     color: var(--color-ebony);
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 36px;
+    }
   }
 
   &__content {
     display: flex;
     align-items: flex-end;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      & > * {
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+        width: 49%;
+        flex-grow: initial;
+
+        .form-field__input {
+          width: 100%;
+        }
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__field {
@@ -93,5 +122,10 @@
 
   &__btn {
     padding: 11px 29px;
+  }
+
+  @include mobile {
+    top: initial;
+    padding: 10px 15px;
   }
 }
