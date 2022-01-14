@@ -12,6 +12,14 @@
   @include tablet {
     display: none;
   }
+
+  &--nav {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
 }
 
 .contacts-link {
@@ -58,6 +66,10 @@
 
   &--call {
     background-image: url('../img/phone.svg');
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &--mail {
