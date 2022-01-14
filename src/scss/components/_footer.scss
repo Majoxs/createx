@@ -5,16 +5,30 @@
 
   &__left {
     grid-column: 7 span;
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__logo {
     margin-right: 58px;
+
+    @include mobile {
+      display: inline-block;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
 
   &__top {
     @include flex-v-center;
 
     margin-bottom: 25px;
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__descr {
@@ -31,6 +45,10 @@
     @include minitablet {
       grid-column: 12 span;
     }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__address {
@@ -39,6 +57,10 @@
 
   &__nav {
     grid-column: 8 span;
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__copyright {
@@ -54,6 +76,11 @@
       background-position: 1px center;
       background-size: 16px 16px;
       background-repeat: no-repeat;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+      padding-top: 20px;
     }
   }
 }
@@ -164,6 +191,10 @@
       @include minitablet {
         margin-right: 40px;
       }
+
+      @include mobile {
+        margin-right: 35px;
+      }
     }
   }
 
@@ -193,7 +224,12 @@
       color: var(--color-light);
     }
   }
+
   @include minitablet {
     padding-left: 24px;
+  }
+
+  @include mobile {
+    padding-left: 0;
   }
 }

@@ -63,7 +63,7 @@ if (portSlider) {
 
 if (relatedSlider) {
   const relatedProjSlider = new Swiper(relatedSlider, {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: gap,
     on: {
       init: function () {
@@ -81,6 +81,14 @@ if (relatedSlider) {
       nextEl: '.related-projects__next',
       prevEl: '.related-projects__prev',
     },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      }
+    }
   });
 
   document.querySelector('.related-projects__prev').addEventListener('click', () => {
@@ -129,9 +137,17 @@ const workImages = document.querySelector('.work-images-slider');
 if (workImages) {
   const workSlider = new Swiper('.work-images-nav', {
     spaceBetween: 20,
-    slidesPerView: 10,
+    slidesPerView: 3,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 6,
+      },
+      768: {
+        slidesPerView: 10,
+      }
+    }
   });
   const workSlidesNav = new Swiper(workImages, {
     spaceBetween: 20,

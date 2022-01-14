@@ -38,7 +38,15 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+
+        @include tablet {
+          display: none;
+        }
       }
+    }
+
+    @include tablet {
+      grid-column: 6 span;
     }
   }
 
@@ -57,5 +65,4 @@
     line-height: 160%;
     color: var(--color-storm);
   }
- 
 }

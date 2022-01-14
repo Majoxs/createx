@@ -33,6 +33,19 @@
       .form-field__input {
         height: 100px;
       }
+
+      @include mobile {
+        margin-top: 0; 
+      }
     }
+
+    @include mobile {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  @include mobile {
+    padding-bottom: 40px;     
   }
 }

@@ -10,6 +10,18 @@
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 120px;
     gap: calc(var(--contacts-gap) * 2);
+
+    @include minidesk {
+      --contacts-gap: 40px;
+    }
+
+    @include minitablet {
+      display: block;
+    }
+
+    @include mobile {
+      margin-bottom: 60px;
+    }
   }
 
   &__soc {
@@ -69,6 +81,10 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
+
+      @include minitablet {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -88,6 +104,10 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-ebony);
+
+    @include minitablet {
+     width: 100%; 
+    }
   }
 
   &__link {
@@ -125,6 +145,11 @@
 
   &__value {
     color: var(--color-ebony);
+  }
+
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;   
   }
 }
 
